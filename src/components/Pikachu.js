@@ -36,6 +36,12 @@ class Pikachu extends React.Component {
       </div>
     )
   }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.size !== this.state.size) {
+      this.resizePikachu();
+    }
+  }
 }
 
 export default Pikachu;
